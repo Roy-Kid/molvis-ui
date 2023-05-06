@@ -9,6 +9,8 @@ import Sheet from '@mui/joy/Sheet';
 import MolvisLogo from './MolvisLogo';
 import { openSidebar } from '../utils/sidebarController';
 
+import {FiFile, FiSettings} from 'react-icons/fi';
+
 export default function FirstSidebar() {
   return (
     <Sheet
@@ -25,7 +27,7 @@ export default function FirstSidebar() {
           xs: 'translateX(calc(100% * (var(--SideNavigation-slideIn, 0) - 1)))',
           md: 'none',
         },
-        transition: 'transform 0.4s',
+        transition: 'transform 0.2s',
         zIndex: 10000,
         height: '100dvh',
         width: 'var(--FirstSidebar-width)',
@@ -44,17 +46,12 @@ export default function FirstSidebar() {
       <GlobalStyles
         styles={{
           ':root': {
-            '--FirstSidebar-width': '68px',
+            '--FirstSidebar-width': '56px',
           },
         }}
       />
       <MolvisLogo />
       <List sx={{ '--ListItem-radius': '8px', '--List-gap': '12px' }}>
-        <ListItem>
-          <ListItemButton>
-            <i data-feather="home" />
-          </ListItemButton>
-        </ListItem>
         <ListItem>
           <ListItemButton
             selected
@@ -62,27 +59,7 @@ export default function FirstSidebar() {
             color="primary"
             onClick={() => openSidebar()}
           >
-            <i data-feather="bar-chart-2" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton onClick={() => openSidebar()}>
-            <i data-feather="layers" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton onClick={() => openSidebar()}>
-            <i data-feather="check-square" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton onClick={() => openSidebar()}>
-            <i data-feather="flag" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton onClick={() => openSidebar()}>
-            <i data-feather="users" />
+            <FiFile />
           </ListItemButton>
         </ListItem>
       </List>
@@ -96,17 +73,12 @@ export default function FirstSidebar() {
       >
         <ListItem>
           <ListItemButton>
-            <i data-feather="life-buoy" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton>
-            <i data-feather="settings" />
+            <FiSettings />
           </ListItemButton>
         </ListItem>
       </List>
       <Divider />
-      <Avatar variant="outlined" src="/static/images/avatar/3.jpg" />
+      <Avatar variant="outlined" />
     </Sheet>
   );
 }

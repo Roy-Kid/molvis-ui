@@ -7,7 +7,6 @@ import Button from '@mui/joy/Button';
 import Breadcrumbs from '@mui/joy/Breadcrumbs';
 import Link from '@mui/joy/Link';
 import Typography from '@mui/joy/Typography';
-import useScript from './utils/useScript';
 import FirstSidebar from './components/FirstSidebar';
 import SecondSidebar from './components/SecondSidebar';
 import OrderTable from './components/OrderTable';
@@ -15,32 +14,10 @@ import Header from './components/Header';
 import ColorSchemeToggle from './components/ColorSchemeToggle';
 import customTheme from './theme/theme';
 
-const useEnhancedEffect =
-  typeof window !== 'undefined' ? React.useLayoutEffect : React.useEffect;
-
 export default function JoyOrderDashboardTemplate() {
-  const status = useScript(`https://unpkg.com/feather-icons`);
-
-  useEnhancedEffect(() => {
-    // Feather icon setup: https://github.com/feathericons/feather#4-replace
-    if (typeof feather !== 'undefined') {
-      feather.replace();
-    }
-  }, [status]);
 
   return (
     <CssVarsProvider disableTransitionOnChange theme={customTheme}>
-      <GlobalStyles
-        styles={{
-          '[data-feather], .feather': {
-            color: 'var(--Icon-color)',
-            margin: 'var(--Icon-margin)',
-            fontSize: 'var(--Icon-fontSize, 20px)',
-            width: '1em',
-            height: '1em',
-          },
-        }}
-      />
       <CssBaseline />
       <Box sx={{ display: 'flex', minHeight: '100dvh' }}>
         {/* <Header /> */}
