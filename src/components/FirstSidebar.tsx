@@ -6,7 +6,7 @@ import List from '@mui/joy/List';
 import ListItem from '@mui/joy/ListItem';
 import ListItemButton from '@mui/joy/ListItemButton';
 import Sheet from '@mui/joy/Sheet';
-import MuiLogo from './MolvisLogo';
+import MolvisLogo from './MolvisLogo';
 import { openSidebar } from '../utils/sidebarController';
 
 export default function FirstSidebar() {
@@ -48,7 +48,7 @@ export default function FirstSidebar() {
           },
         }}
       />
-      <MuiLogo />
+      <MolvisLogo />
       <List sx={{ '--ListItem-radius': '8px', '--List-gap': '12px' }}>
         <ListItem>
           <ListItemButton>

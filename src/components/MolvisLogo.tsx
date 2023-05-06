@@ -1,7 +1,6 @@
-import * as React from 'react';
 import AspectRatio, { AspectRatioProps } from '@mui/joy/AspectRatio';
 
-export default function MuiLogo({ sx, ...props }: AspectRatioProps) {
+export default function MolvisLogo({ sx, ...props }: AspectRatioProps) {
   return (
     <AspectRatio
       ratio="1"

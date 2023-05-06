@@ -1,7 +1,7 @@
 import GlobalStyles from '@mui/joy/GlobalStyles';
 import IconButton from '@mui/joy/IconButton';
 import Sheet from '@mui/joy/Sheet';
-import MuiLogo from './MolvisLogo';
+import MolvisLogo from './MolvisLogo';
 import { toggleSidebar } from '../utils/sidebarController';
 import ColorSchemeToggle from './ColorSchemeToggle';
 
@@ -40,7 +40,7 @@ export default function Header() {
       >
         <i data-feather="menu" />
       </IconButton>
-      <MuiLogo variant="plain" sx={{ boxShadow: 'none', mr: 'auto' }} />
+      <MolvisLogo variant="plain" sx={{ boxShadow: 'none', mr: 'auto' }} />
       <ColorSchemeToggle id={undefined} />
     </Sheet>
   );
