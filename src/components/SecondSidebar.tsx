@@ -15,7 +15,7 @@ import { closeSidebar } from '../utils/sidebarController';
 export default function SecondSidebar() {
   return (
     <React.Fragment>
-      <Box
+      {/* <Box
         className="SecondSidebar-overlay"
         sx={{
           position: 'fixed',
@@ -29,11 +29,11 @@ export default function SecondSidebar() {
           transition: 'opacity 0.4s',
           transform: {
             xs: 'translateX(calc(100% * (var(--SideNavigation-slideIn, 0) - 1) + var(--SideNavigation-slideIn, 0) * var(--FirstSidebar-width, 0px)))',
-            lg: 'translateX(-100%)',
+            lg: 'translateX(calc(100% * (var(--SideNavigation-slideIn, 0) - 1) + var(--SideNavigation-slideIn, 0) * var(--FirstSidebar-width, 0px)))',
           },
         }}
         onClick={() => closeSidebar()}
-      />
+      /> */}
       <Sheet
         className="SecondSidebar"
         sx={{
@@ -43,7 +43,7 @@ export default function SecondSidebar() {
           },
           transform: {
             xs: 'translateX(calc(100% * (var(--SideNavigation-slideIn, 0) - 1) + var(--SideNavigation-slideIn, 0) * var(--FirstSidebar-width, 0px)))',
-            lg: 'none',
+            lg: 'translateX(calc(100% * (var(--SideNavigation-slideIn, 0) - 1) + var(--SideNavigation-slideIn, 0) * var(--FirstSidebar-width, 0px)))',
           },
           borderRight: '1px solid',
           borderColor: 'divider',

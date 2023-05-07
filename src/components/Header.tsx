@@ -4,6 +4,7 @@ import Sheet from '@mui/joy/Sheet';
 import MolvisLogo from './MolvisLogo';
 import { toggleSidebar } from '../utils/sidebarController';
 import ColorSchemeToggle from './ColorSchemeToggle';
+import { FiMenu } from 'react-icons/fi';
 
 export default function Header() {
   return (
@@ -38,7 +39,7 @@ export default function Header() {
         color="neutral"
         size="sm"
       >
-        <i data-feather="menu" />
+        <FiMenu />
       </IconButton>
       <MolvisLogo variant="plain" sx={{ boxShadow: 'none', mr: 'auto' }} />
       <ColorSchemeToggle id={undefined} />

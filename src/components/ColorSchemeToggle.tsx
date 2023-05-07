@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useColorScheme } from '@mui/joy/styles';
 import IconButton, { IconButtonProps } from '@mui/joy/IconButton';
+import {FiSun, FiMoon} from 'react-icons/fi';
 
 export default function ColorSchemeToggle({
   onClick,
@@ -51,8 +52,8 @@ export default function ColorSchemeToggle({
         ...(Array.isArray(sx) ? sx : [sx]),
       ]}
     >
-      <i data-feather="moon" />
-      <i data-feather="sun" />
+      <FiSun />
+      <FiMoon />
     </IconButton>
   );
 }
