@@ -8,9 +8,12 @@ import Sheet from '@mui/joy/Sheet';
 import MolvisLogo from './MolvisLogo';
 import { toggleSidebar } from '../utils/sidebarController';
 
-import {FiCamera, FiFile, FiSettings} from 'react-icons/fi';
+import { FiCamera, FiFile, FiSettings } from 'react-icons/fi';
+import { useState } from 'react';
+
 
 export default function FirstSidebar() {
+  const [buttonHighlight, setButtonHighlight] = useState(true);
   return (
     <Sheet
       className="FirstSidebar"
@@ -53,10 +56,9 @@ export default function FirstSidebar() {
       <List sx={{ '--ListItem-radius': '8px', '--List-gap': '12px' }}>
         <ListItem>
           <ListItemButton
-            selected
-            variant="solid"
-            color="primary"
-            onClick={() => toggleSidebar()}
+            selected={buttonHighlight}
+            onClick={() => { toggleSidebar(); buttonHighlight ? setButtonHighlight(false) : setButtonHighlight(true);
+               }}
           >
             <FiFile />
           </ListItemButton>
