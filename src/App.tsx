@@ -21,9 +21,9 @@ export default function JoyOrderDashboardTemplate() {
       <CssBaseline />
       <Box sx={{ display: 'flex', minHeight: '100dvh' }}>
         {/* <Header /> */}
-         <FirstSidebar />
-        {/*<SecondSidebar />
-        <Box
+        <FirstSidebar />
+        <SecondSidebar />
+        {/* <Box
           component="main"
           className="MainContent"
           sx={(theme) => ({

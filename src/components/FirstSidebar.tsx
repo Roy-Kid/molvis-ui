@@ -1,4 +1,3 @@
-import * as React from 'react';
 import GlobalStyles from '@mui/joy/GlobalStyles';
 import Avatar from '@mui/joy/Avatar';
 import Divider from '@mui/joy/Divider';
@@ -7,9 +6,9 @@ import ListItem from '@mui/joy/ListItem';
 import ListItemButton from '@mui/joy/ListItemButton';
 import Sheet from '@mui/joy/Sheet';
 import MolvisLogo from './MolvisLogo';
-import { openSidebar } from '../utils/sidebarController';
+import { toggleSidebar } from '../utils/sidebarController';
 
-import {FiFile, FiSettings} from 'react-icons/fi';
+import {FiCamera, FiFile, FiSettings} from 'react-icons/fi';
 
 export default function FirstSidebar() {
   return (
@@ -57,9 +56,14 @@ export default function FirstSidebar() {
             selected
             variant="solid"
             color="primary"
-            onClick={() => openSidebar()}
+            onClick={() => toggleSidebar()}
           >
             <FiFile />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton>
+            <FiCamera />
           </ListItemButton>
         </ListItem>
       </List>
